@@ -20,8 +20,5 @@ public class Linear2 {
             z = ((b + Math.sqrt(Math.pow(b, 2) + (4 * a * c))) / (2 * a)) - Math.pow(a, 3) * c + Math.pow(b, -2);
             System.out.format("%.3f", z);
         }
-
     }
-
-
 }
