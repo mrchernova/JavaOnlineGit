@@ -1,5 +1,5 @@
 /**
- * Вычислить значения функции на отрезке [a,b] с шагом h
+ * Вычислить значения функции на отрезке [a,b] с шагом h 
  */
 package by.epam.jonline.module1.cycle2;
 
@@ -12,10 +12,12 @@ public class Cycle2 {
         int h;
 
         Scanner sc = new Scanner(System.in);
+        
         System.out.println("Используйте натуральные числа!");
         System.out.println("Введите через пробел отрезок [a,b] ");
         a = sc.nextInt();
         b = sc.nextInt();
+       
         System.out.println("Задайте шаг h");
         h = sc.nextInt();
 
