@@ -1,6 +1,7 @@
 /**
  * Составить программу нахождения произведения квадратов первых 200 чисел
  */
+
 package by.epam.jonline.module1.cycle4;
 
 public class Cycle4 {
