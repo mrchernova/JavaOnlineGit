@@ -14,10 +14,13 @@ public class Linear5 {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите натуральное число T ");
+       
         T = sc.nextInt();
+       
         h = T / 3600;
         m = (T - h * 3600) / 60;
         s = (T - h * 3600) - 60 * m;
+        
         System.out.printf("%02dч %02dмин %02dс", h, m, s);
 
     }
