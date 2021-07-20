@@ -14,8 +14,8 @@ public class Branching4 {
         int y = 5;
         int z = 21;
 
-        System.out.printf("Кирпич %sx%sx%s \n",x,y,z);
-        System.out.printf("Отверстие %sx%s \n",A,B);
+        System.out.printf("Кирпич %sx%sx%s \n", x, y, z);
+        System.out.printf("Отверстие %sx%s \n", A, B);
         
         if (((A >= x) & (B >= y)) || ((A >= y) & (B >= x)) ||
                 ((A >= x) & (B >= z)) || ((A >= z) & (B >= x)) ||
