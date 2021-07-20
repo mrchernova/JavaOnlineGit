@@ -1,6 +1,7 @@
 /**
  * Найти сумму квадратов первых ста чисел
  */
+
 package by.epam.jonline.module1.cycle3;
 
 public class Cycle3 {
