@@ -9,10 +9,9 @@ import java.util.Scanner;
 
 public class Linear4 {
     public static void main(String[] args) {
-        double n = 0;
+        double n;
         double x;
-        boolean flag = false;
-
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите действительное число в формате nnn.ddd ");
 
