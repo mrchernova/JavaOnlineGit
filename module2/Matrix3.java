@@ -1,5 +1,5 @@
 /**
- * 1. Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего
+ * 3. Дана матрица. Вывести k-строку и p-столбец матрицы
  */
 
 package by.epam.jonline;
@@ -12,7 +12,8 @@ public class Matrix3 {
         int m = 3;
 
         int[][] matrix = new int[n][m];
-
+        //int p = 0;
+        //int k = 0;
 
         initMatrix(matrix);
         printMatrix(matrix);
@@ -53,25 +54,15 @@ public class Matrix3 {
 
     public static void pColumn(int[][] matrix) {
         int p = 0;
-
-
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-
-                if (j == p) {
-                    System.out.print(matrix[i][j] + " ");
-                }
+                    System.out.print(matrix[i][p] + " ");
             }
         }
-    }
 
     public static void kRow(int[][] matrix) {
         int k = 0;
-
-        for (int i = 0; i < matrix.length; i++) {
-
-            System.out.print(matrix[i][k]+" ");
-
+        for (int j = 0; j < matrix[k].length; j++) {
+            System.out.print(matrix[k][j]+" ");
         }
     }
 
