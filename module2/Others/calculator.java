@@ -2,8 +2,8 @@ package by.epam.jonline.module2.Others;
 
 public class calculator {
     public static void main(String[] args) {
-        double a = 4;
-        double b = 0;
+        /*double aa = 4;
+        double bb = 0;
         
         
         String s = "/";
@@ -22,7 +22,20 @@ public class calculator {
         }
         
         if (s == "*"){ System.out.println(a * b); }
-       
+       */
+        double otv;
+        double a = 1;
+        double b = 2;
+        
+        
+        otv = Math.sqrt((Math.pow(a,2)+Math.pow(b,2))/2);
+        System.out.println("OTVET = "+otv);
+        
+        
+        
+        
+        
+        
         
         
     }
