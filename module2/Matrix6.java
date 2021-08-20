@@ -26,15 +26,22 @@ public class Matrix6 {
 
     // init array -------------------------------------------------------------------------------------------
     public static void initMatrix(int[][] matrix) {
-       
+        int x = 0;
         for (int i = 0; i < matrix.length; i++) {
-            int x = i;
-            for (int j = x; j < matrix.length-i; j++) {
-                matrix[i][j] = i + 1;
-                
+
+            if (i < matrix.length / 2) {
+                x = i;
+                for (int j = x; j < matrix.length - i; j++) {
+                    matrix[i][j] = 1;
+                }
+            } else {
+
+                for (int j = x; j < matrix.length - x; j++) {
+                    matrix[i][j] = 1;
+                }
+                x--;
             }
         }
-
     }
 
 
