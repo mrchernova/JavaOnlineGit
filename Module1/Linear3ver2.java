@@ -11,7 +11,7 @@ public class Linear3ver2 {
         double x = 30;
         double y = 30;
         
-        double xy = x*y;
+        double xy = x * y;
         double tgxy = Math.sin(xy) / Math.cos(xy);
 
         double answer = ((Math.sin(x)+Math.cos(y))*tgxy) / (Math.cos(x)-Math.sin(y));
