@@ -22,13 +22,12 @@ public class Matrix8 {
 
 
         System.out.println("Введите номера столбцов, которые  нужно поменять местами");
+        
+        System.out.print("Введите номер первого столбца >> ");
         st1 = checkScanner(n);
+       
+        System.out.print("Введите номер второго столбца >> ");
         st2 = checkScanner(n);
-
-        System.out.println(st1);
-        System.out.println(st2);
-        
-        
 
         System.out.println("Матрица после замены столбцов:");
         searchAndReplace(matrix, st1, st2);
@@ -51,9 +50,8 @@ public class Matrix8 {
         int num;
 
         Scanner scNum = new Scanner(System.in);
-        System.out.println("Номер num >>");
         while (!scNum.hasNextInt()) {
-            System.out.println("Это не num число. Введите num еще раз");
+            System.out.println("Это не число. Введите еще раз");
             scNum.next();
         }
         num = scNum.nextInt();
@@ -63,7 +61,7 @@ public class Matrix8 {
             if ((num > 0) & (num <= n)) {
                 ok = true;
             } else {
-                System.out.println("Еще раз номер num");
+                System.out.println("Еще раз номер столбца");
                 num = scNum.nextInt();
             }
         }
@@ -102,28 +100,11 @@ public class Matrix8 {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 System.out.format("%3s", matrix[i][j]);
-
             }
             System.out.println();
         }
 
     }
 
-
 }
 
-/* 
- 
- Scanner sc = new Scanner(System.in);
-        System.out.println("Введите целое положительное число ");
-        
-        while (!sc.hasNextInt()) {
-            System.out.println("Это не целое число. Введите число еще раз");
-            sc.next();
-        }
-            n = sc.nextInt();
-            while (n < 0) {
-                System.out.println("Введите положительное число ");
-                n = sc.nextInt();
-            }
- */
