@@ -70,11 +70,8 @@ public class Matrix8 {
 
 
     public static void searchAndReplace(int[][] matrix, int st1, int st2) {
-
-        // Выравнивание для удобства пользователя
         st1--;
         st2--;
-
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
@@ -96,14 +93,12 @@ public class Matrix8 {
 
     public static void printMatrix(int[][] matrix) {
 
-        int k = 0;
-        for (int i = 0; i < matrix.length; i++) {
+       for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 System.out.format("%3s", matrix[i][j]);
             }
             System.out.println();
         }
-
     }
 
 }
