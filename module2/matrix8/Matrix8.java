@@ -14,6 +14,7 @@ public class Matrix8 {
         int n = 5;
         int st1;
         int st2;
+        
         int[][] matrix = new int[n][n];
 
         initMatrix(matrix);
@@ -21,15 +22,13 @@ public class Matrix8 {
 
 
         System.out.println("Введите номера столбцов, которые  нужно поменять местами");
+        st1 = checkScanner(n);
+        st2 = checkScanner(n);
 
-        Scanner scSt1 = new Scanner(System.in);
-        System.out.println("Номер первого столбца >>");
-        st1 = scSt1.nextInt();
-
-
-        Scanner scSt2 = new Scanner(System.in);
-        System.out.println("Номер второго столбца >>");
-        st2 = scSt2.nextInt();
+        System.out.println(st1);
+        System.out.println(st2);
+        
+        
 
         System.out.println("Матрица после замены столбцов:");
         searchAndReplace(matrix, st1, st2);
@@ -45,17 +44,42 @@ public class Matrix8 {
         }
     }
 
+
     /*----------------------------------------------------------------------------------------------------------------------*/
+
+    public static int checkScanner(int n) {
+        int num;
+
+        Scanner scNum = new Scanner(System.in);
+        System.out.println("Номер num >>");
+        while (!scNum.hasNextInt()) {
+            System.out.println("Это не num число. Введите num еще раз");
+            scNum.next();
+        }
+        num = scNum.nextInt();
+
+        boolean ok = false;
+        while (!ok) {
+            if ((num > 0) & (num <= n)) {
+                ok = true;
+            } else {
+                System.out.println("Еще раз номер num");
+                num = scNum.nextInt();
+            }
+        }
+        return num;
+    }
+
+
     public static void searchAndReplace(int[][] matrix, int st1, int st2) {
 
         // Выравнивание для удобства пользователя
-        st1 = st1 - 1;
-        st2 = st2 - 1;
+        st1--;
+        st2--;
 
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-
 
                 if (j == st1) {
                     System.out.format("%3s", matrix[i][st2]);
@@ -65,12 +89,9 @@ public class Matrix8 {
                     } else {
                         System.out.format("%3s", matrix[i][j]);
                     }
-
                 }
-
             }
             System.out.println();
-
         }
     }
     /*----------------------------------------------------------------------------------------------------------------------*/
