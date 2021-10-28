@@ -22,12 +22,17 @@ public class Matrix12 {
                     int min = matrix[row][cell];
                     int min_cell = cell;
 
+// находится минимальный элемент в строке
                     for (int nextCell = cell + 1; nextCell < n; nextCell++) {
                         if (matrix[row][nextCell] < min) {
                             min = matrix[row][nextCell];
                             min_cell = nextCell;
                         }
                     }
+                    // если текущая ячейка не минимальна, тогда
+                    //временной переменной присвоить текущее
+                    //а на место текущего поставить минимальный
+                    // так отсортируем всю строку
 
                     if (cell != min_cell) {
                         int tmp = matrix[row][cell];
