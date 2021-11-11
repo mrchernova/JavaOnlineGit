@@ -17,7 +17,7 @@ public class Matrix11 {
         initMatrix(matrix);
         printMatrix(matrix);
 
-        System.out.println("Положительные элементы главной диагонали: ");
+        System.out.println("Номера строк, в которых число 5 всчтречается три и более раз: ");
         C5ThreeAndMore(matrix);
 
 
@@ -43,17 +43,25 @@ public class Matrix11 {
     }
 
     public static void C5ThreeAndMore(int[][] matrix) {
+      int q = 0;
         for (int i = 0; i < matrix.length; i++) {
+            int k = 0;
             for (int j = 0; j < matrix[i].length; j++) {
-
-
+                
+                if (matrix[i][j] == 5){
+                    k++;
+                }
             }
-            if (matrix[i][i] > 0) {
-                System.out.print(matrix[i][i] + " ");
+            if (k >= 3){
+                // вывести номер строки
+                System.out.print(i+1 + " ");
+                q++;// счетчик были ли выводимые строки
             }
         }
-
-
+        if (q == 0){
+            System.out.println("Нет строк, подходящих к данному условию");
+        }
     }
+    
 
 }
