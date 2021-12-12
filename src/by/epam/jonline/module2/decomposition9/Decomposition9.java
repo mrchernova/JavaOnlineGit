@@ -1,40 +1,42 @@
 /**
- *
+ * Даны числа X,Y,Z,T - длины сторон четырехугольника.
+ * Написать метод вычисления его площади, если угол
+ * между сторонами длиной X и Y - прямой
  */
 
 package by.epam.jonline.module2.decomposition9;
 
 public class Decomposition9 {
     public static void main(String[] args) {
-        int a = 6;
-        int b = 4;
-        int a1 = 5;
-        int b1 = 3;
+        double X = 6;
+        double Y = 4;
+        double Z = 5;
+        double T = 3;
+        double C;
+        double S;
+
+        C = Gipotenuza(X, Y);
+
+        S = S_tr(X, Y, C) + S_tr(Z, T, C);
+
+        System.out.print("Площадь четырехугольника = ");
+        System.out.printf("%.2f", S);
+    }
+
+    public static double Gipotenuza(double b, double a) {
         double c;
-        double s1;
-        double s2;
-        double p;
-        double s;
-
-
-        // Найдем площадь четырехугольника разбив его на два треугольника
-
-        // находим третью сторону тпервого треугольника
         c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-        System.out.println("Гипотенуза = " + c);
+        return c;
+    }
 
-        // находим площадь прямоугольного треугольника по трем сторонам
-        s1 = (a * b) / 2;
-        System.out.println("Площадь первого треугольника = " + s1);
+    // нахождение площади прямоугольного треугольника по трем сторонам
+    public static double S_tr(double a, double b, double c) {
+        double s;
+        double p;
 
+        p = (a + b + c) / 2;
+        s = Math.sqrt((p * (p - a) * (p - b) * (p - c)));
 
-        // находим площадь второго треугольника
-        p = (a1 + b1 + c) / 2;
-        s2 = Math.sqrt((p * (p - a1) * (p - b1) * (p - c)));
-        System.out.println("Площадь второго треугольника = " + s2);
-
-
-        s = s1 + s2;
-        System.out.println("Площадь четырехугольника = " + s);
+        return s;
     }
 }
