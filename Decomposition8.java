@@ -6,20 +6,37 @@
 
 package by.epam.jonline.module2.decompositions.decomposition8;
 
+import java.util.Arrays;
+
 public class Decomposition8 {
     public static void main(String[] args) {
 
         int[] d = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        int sum = 0;
-        int k = 3;
-        int m = k + 3;
+        int k = 1;
+        int m = k + 2;
 
-        for (int i = k; i < m; i++) {
-            sum = sum + d[i];
+        System.out.print("Дан массив D: ");
+        System.out.println(Arrays.toString(d));
+
+        System.out.println("k = " + k);
+        System.out.println("m = " + m);
+
+        if ((m > d.length) && (k < 1)) {
+            System.out.println("Сложение невозможно. Выход за пределы массива");
+        } else {
+            System.out.println("Сумма элементов от D[" + k + "] до D[" + m + "] = " + Sum3x(d, k));
         }
-
-        System.out.println(sum);
-
     }
+
+    public static int Sum3x(int[] a, int k) {
+        int sum = 0;
+        --k;
+
+        for (int i = k; i < k + 3; i++) {
+            sum = sum + a[i];
+        }
+        return sum;
+    }
+
 }
