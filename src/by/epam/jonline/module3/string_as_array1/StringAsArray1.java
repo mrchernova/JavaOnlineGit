@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class StringAsArray1 {
     public static void main(String[] args) {
         String[] s = new String[]{"oneStringArray", "twoString", "строкаТри"};
-        System.out.println("Array in camelCase:");
+        System.out.println("Дана строка в camelCase:");
         System.out.println(Arrays.toString(s));
 
         for (int i = 0; i < s.length; i++) {
@@ -24,7 +24,7 @@ public class StringAsArray1 {
             }
             s[i] = s[i].toLowerCase();
         }
-        System.out.println("Array in snake_case:");
+        System.out.println("Полученная строка в snake_case:");
         System.out.println(Arrays.toString(s));
     }
 }
