@@ -24,7 +24,7 @@ public class StringAsObject5 {
 
         if (count == 0) {
             System.out.println("Буквы 'а' в строке " + s + " нет");
-        }else {
+        } else {
             System.out.println("Букв 'а' в строке = " + count);
         }
 
