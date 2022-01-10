@@ -5,29 +5,21 @@
 
 package by.epam.jonline.module3.string_as_object8;
 
+
 public class StringAsObject8 {
     public static void main(String[] args) {
-        //StringBuilder sb = new StringBuilder("qwerty asdfasdf zxc");
-        StringBuilder sb = new StringBuilder("qwerty asdfasdf zxc");
 
+        String s = "qwerty asdfasdf zxc";
         String max_word = "";
 
-        System.out.println(sb);
+        String[] word = s.split(" ");
 
-        int l = sb.length();
-        System.out.println(l);
-
-        for (int i = 0;i<sb.length(); i++){
-
-            if (Character.toString(sb.charAt(0)) != " "){
-                System.out.print(Character.toString(sb.charAt(0)));
+        for (int i = 0; i < word.length; i++) {
+            if (word[i].length() > max_word.length()) {
+                max_word = word[i];
             }
-
         }
-        System.out.println();
-
-
-
+        System.out.println(max_word);
 
     }
 }
